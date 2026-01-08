@@ -1,3 +1,4 @@
+// user starting scores
 var scores = {
     artemis: 0,
     helios: 0,
@@ -7,8 +8,9 @@ var scores = {
     mugger: 0,
     noncha: 0,
     social: 0
-}
+};
 
+// questions
 const questions =[
     // 1
     {
@@ -100,12 +102,12 @@ const questions =[
 
     // 9
     {
-        question: "Well that was my last question. I got to go now! It was fun spending time with you in school :)",
+        question: "Well that was my last question. I got to go now! It was fun spending time with you in AStaR",
         choices: [
             {text: 'AWOOOOO', type: 'artemis'},
-            {text: 'NEIGH', type: 'helios'},
-            {text: 'HOOT HOTT', type: 'athena'},
-            {text: 'AWOOSHA!!', type: 'poseidon'}
+            {text: 'NEIGHHH', type: 'helios'},
+            {text: 'HOOT HOOT', type: 'athena'},
+            {text: 'AWOOSHAA!', type: 'poseidon'}
         ]
     },
     
@@ -121,6 +123,7 @@ const questions =[
     }
 ];
 
+// starting 
 document.getElementById('quiz').style.display = 'none';
 document.getElementById('result').style.display = 'none';
 document.getElementById('restart').style.display = 'none';
@@ -173,7 +176,7 @@ function handle_clicks(){
 function next_qn(event){
     const chosen = event.target.value;
 
-    // increment score
+    // increment score -- use weights next time
     scores[chosen]++;
     
     /*
@@ -218,9 +221,14 @@ function show_result(){
     const final_person = breakTieRandom(personality)
 
 
+
+
     // display
     const result = document.getElementById('result');
-    result.innerHTML = `<p> ${final_house} <br> ${final_person} </p>`
+    let html = `<p> ${final_house} <br> ${final_person} </p>`
+    html += `<img src="images/${final_house}.jpg">`
+    //html += `<img src="images/${final_house}_${final_person}.jpg>"`
+    result.innerHTML = html
 
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('result').style.display = 'block';
@@ -228,6 +236,7 @@ function show_result(){
 
 }
 
+// copied this from chatgpt :)
 function breakTieRandom(candidates) {
     return candidates[Math.floor(Math.random() * candidates.length)];
 }
