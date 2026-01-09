@@ -44,7 +44,7 @@ const questions =[
             {text: 'Sure.', type: 'noncha'},
             {text: "Hi bob! You're so cute <3", type: 'social'}
         ]
-    }
+    },
 
     // 3
     {
