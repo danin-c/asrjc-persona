@@ -37,7 +37,7 @@ const questions =[
 
     // 1 + 2
     {
-        question: "Welcome to AStaR! You’ve been abducted by an alien. I’m bob! I love asking questions and going to school. Please be my friend for today.",
+        question: "Welcome to AStaR! You’ve been abducted by an alien. \n'I’m bob! I love asking questions and going to school. Please be my friend for today.'",
         choices: [
             {text: 'Of course!!', type: 'hype'},
             {text: 'I guess I can spare some time', type: 'mugger'},
@@ -121,7 +121,7 @@ const questions =[
             {text: 'HOOT HOOT', type: 'athena'},
             {text: 'AWOOSHAA!', type: 'poseidon'}
         ]
-    },
+    }
     
     /*
     // 10
@@ -177,8 +177,8 @@ function display_qns(){
     const question = questions[current_qn];
 
     // display qn
-    let html = `<p>${question.question}</p>`
-    //html += `<img class="img" src="images/artemis.PNG">`
+    let html = `<p>${question.question} </p>`
+    html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
 
     // loop through choices
     for (const choice of question.choices){
@@ -220,6 +220,7 @@ function next_qn(event){
     // check if it's last qn
     if (current_qn < questions.length - 1){
         current_qn++;
+        show_progress()
         display_qns();
     } else {
         show_result();
@@ -248,9 +249,6 @@ function show_result(){
     const final_house = breakTieRandom(house)
     const final_person = breakTieRandom(personality)
 
-
-
-
     // display
     const result = document.getElementById('result');
     let html = `<h1> Results </h1>`
@@ -261,6 +259,7 @@ function show_result(){
     result.innerHTML = html
 
     document.getElementById('quiz').style.display = 'none';
+    document.getElementById('bar').style.display = 'none';
     document.getElementById('result').style.display = 'block';
     document.getElementById('restart').style.display = 'block';
 
@@ -283,7 +282,7 @@ function restart(){
 }
 
 function show_progress(){
-
+    return;
 }
 
 document.getElementById('restart_btn').addEventListener('click', restart);
