@@ -65,7 +65,7 @@ const questions =[
 
     // 6 drinks stall lady
     {
-        question: `'That\'s amazing! Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
+        question: `'That\'s amazing!<br> Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
             {text: 'Sure! Let\'s go get some drinks', type: 'helios'},
             {text: 'Sounds great', type: 'poseidon'},
@@ -98,14 +98,10 @@ const questions =[
 ];
 
 const profiles = {
-    artemis: `“Energy first, think later.”
-    You dominate the night. Artemis students are analytical and curious, often gravitating toward Physics, Chemistry, Math, and Economics.<br><br>You are the embodiment of enthusiasm. When something exciting happens, you’re already there — probably yelling, probably smiling. You thrive on momentum, spontaneity, and shared excitement.`,
-    helios: `“People first, always.” 
-    You dominate the sky. Helios students walk their own path, known for unconventional subject combinations and creative thinking.<br><br>You’re warm, friendly, and naturally curious about others. Conversations energise you, and you value connection over competition.`,
-    athena: `“Locked in. No distractions.”
-    You dominate wisdom. Athena students value understanding and balance, commonly taking Biology, Chemistry, Math, and Economics.<br><br>You are focused, driven, and determined. When you set a goal, you commit to it fully — whether it’s academics, self-improvement, or proving something`,
-    poseidon: `“It is what it is.”
-    You dominate the depths. <br>Poseidon students thrive in expression and interpretation, often leaning toward arts and humanities, sometimes paired with sciences.<br><br>You’re calm, composed, and unfazed. While chaos unfolds around you, you remain cool and grounded. You don’t rush, and you don’t stress unless absolutely necessary.`
+    artemis: `“Energy first, think later.”<br><br>You dominate the night. Artemis students are analytical and curious, often gravitating toward Physics, Chemistry, Math, and Economics.<br><br>You are the embodiment of enthusiasm. When something exciting happens, you’re already there — probably yelling, probably smiling. You thrive on momentum, spontaneity, and shared excitement.`,
+    helios: `“People first, always.” <br><br>You dominate the sky. Helios students walk their own path, known for unconventional subject combinations and creative thinking.<br><br>You’re warm, friendly, and naturally curious about others. Conversations energise you, and you value connection over competition.`,
+    athena: `“Locked in. No distractions.”<br><br>You dominate wisdom. Athena students value understanding and balance, commonly taking Biology, Chemistry, Math, and Economics.<br><br>You are focused, driven, and determined. When you set a goal, you commit to it fully — whether it’s academics, self-improvement, or proving something`,
+    poseidon: `“It is what it is.”<br><br> You dominate the depths. <br>Poseidon students thrive in expression and interpretation, often leaning toward arts and humanities, sometimes paired with sciences.<br><br>You’re calm, composed, and unfazed. While chaos unfolds around you, you remain cool and grounded. You don’t rush, and you don’t stress unless absolutely necessary.`
 }
 
 // starting 
@@ -138,7 +134,7 @@ function display_qns(){
     const question = questions[current_qn];
 
     // display qn
-    let html = `<p>${question.question} </p>`
+    let html = `<p>Q${current_qn}/8 ${question.question} </p>`
     html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
 
     // loop through choices
@@ -190,9 +186,9 @@ function next_qn(event){
 
 // result
 function show_result(){
-    let maxScore_house = Math.max(...Object.values(house_scores));
-    let house = Object.keys(house_scores).filter(
-        house => house_scores[house] === maxScore_house
+    let maxScore_house = Math.max(...Object.values(scores));
+    let house = Object.keys(scores).filter(
+        house => scores[house] === maxScore_house
     );
 
     const final_house = breakTieRandom(house)
@@ -201,7 +197,7 @@ function show_result(){
     const result = document.getElementById('result');
     let html = `<h1> Results </h1>`
     html += `<img class="img" src="images/${final_house}.PNG">`
-    html += `<p> <strong> Your house: </strong>${final_house} <br> </p>`
+    html += `<p> <strong> Your house: </strong>${capitalizeFirstLetter(final_house)} <br> </p>`
     html += `<p>${profiles[final_house]} <br></p>`
     result.innerHTML = html
 
@@ -231,6 +227,11 @@ function restart(){
 function show_progress(){
     let bar = document.getElementById('.bar');
     //bar.innerHTML = `${}`
+}
+
+// copied from stack overflow
+function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
 
 document.getElementById('restart_btn').addEventListener('click', restart);
