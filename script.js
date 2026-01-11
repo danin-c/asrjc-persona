@@ -21,7 +21,7 @@ const questions = [
 
     // 2
     {
-        question: `'Hurray! Tell me more about yourself. <br>What's your favourite subject?'`,
+        question: `'Hurray! Tell me more about yourself. <br>Which of the following subjects would you most likely study?'`,
         choices: [
             { text: 'I want to try economics!', type: 'artemis' },
             { text: 'Geography', type: 'athena' },
@@ -32,11 +32,11 @@ const questions = [
 
     // 3
     {
-        question: `An alien walks by. <br>He's calling us to play frisbee with him!`,
+        question: `'That's my favourite subject! <br>Look! Our principal, Mr Heng is inviting us to play frisbee with him'`,
         choices: [
             { text: 'LETS PLAYYYY', type: 'artemis' },
-            { text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'athena' },
-            { text: 'Hurray! What\’s his name?', type: 'helios' },
+            { text: 'I would rather not but I guess it doesn\’t hurt to try', type: 'athena' },
+            { text: 'Hurray! That\'s so cool', type: 'helios' },
             { text: '...', type: 'poseidon' }
         ]
     },
@@ -56,7 +56,7 @@ const questions = [
     {
         question: `'That was a great catch! <br>How did you catch the frisbee?'`,
         choices: [
-            { text: 'Assuming gravity constant = 10 ms^2 ... ', type: 'artemis' },
+            { text: 'Assuming gravitational constant = 10 ms^2 ... ', type: 'artemis' },
             { text: 'Moving faster means higher rate of aerobic respiration ', type: 'athena' },
             { text: 'W\'s in the chat!!', type: 'poseidon' },
             { text: 'Further maths.', type: 'helios' }
@@ -90,7 +90,7 @@ const questions = [
         question: `"Well that was my last question. I got to go now! <br>It was fun spending time with you in AStaR"`,
         choices: [
             { text: 'AWOOOOOOO', type: 'artemis' },
-            { text: 'NEIGHHHHH', type: 'helios' },
+            { text: 'SUNKISSED SHAWTIESSS', type: 'helios' },
             { text: 'HOOT HOOT', type: 'athena' },
             { text: 'AWOOSHAAA', type: 'poseidon' }
         ]
@@ -135,7 +135,7 @@ function display_qns() {
 
     // display qn
     let html = `<div class="qn">`
-    html += `<p>Q${current_qn + 1}/8 ${question.question} </p>`
+    html += `<p>Q${current_qn + 1}/${questions.length}<br> ${question.question} </p>`
     html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
     html += `</div>`
 
