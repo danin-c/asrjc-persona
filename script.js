@@ -7,15 +7,15 @@ var scores = {
 };
 
 // questions
-const questions =[
+const questions = [
     // 1 
     {
         question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
         choices: [
-            {text: 'Of course!!', type: 'artemis'},
-            {text: 'I guess I can spare some time', type: 'athena'},
-            {text: 'Sure.', type: 'poseidon'},
-            {text: "Hi bob! You're so cute <3", type: 'helios'}
+            { text: 'Of course!!', type: 'artemis' },
+            { text: 'I guess I can spare some time', type: 'athena' },
+            { text: 'Sure.', type: 'poseidon' },
+            { text: "Hi bob! You're so cute <3", type: 'helios' }
         ]
     },
 
@@ -23,10 +23,10 @@ const questions =[
     {
         question: `'Hurray! Tell me more about yourself. <br>What's your favourite subject?'`,
         choices: [
-            {text: 'I want to try economics!', type: 'artemis'},
-            {text: 'Geography', type: 'athena'},
-            {text: 'I love history', type: 'helios'},
-            {text: 'Literature!', type: 'poseidon'}
+            { text: 'I want to try economics!', type: 'artemis' },
+            { text: 'Geography', type: 'athena' },
+            { text: 'I love history', type: 'helios' },
+            { text: 'Literature!', type: 'poseidon' }
         ]
     },
 
@@ -34,10 +34,10 @@ const questions =[
     {
         question: `An alien walks by. <br>He's calling us to play frisbee with him!`,
         choices: [
-            {text: 'LETS PLAYYYY', type: 'artemis'},
-            {text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'athena'},
-            {text: 'Hurray! What\’s his name?', type: 'helios'},
-            {text: '...', type: 'poseidon'}
+            { text: 'LETS PLAYYYY', type: 'artemis' },
+            { text: 'I would rather not but i guess it doesn\’t hurt to try', type: 'athena' },
+            { text: 'Hurray! What\’s his name?', type: 'helios' },
+            { text: '...', type: 'poseidon' }
         ]
     },
 
@@ -45,10 +45,10 @@ const questions =[
     {
         question: `A frisbee is coming towards you! <br>What are you doing to catch the frisbee?`,
         choices: [
-            {text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'athena'},
-            {text: "'I got this!'", type: 'helios'},
-            {text: 'Scream ', type: 'artemis'},
-            {text: 'Stand. You attract frisbees.', type: 'poseidon'}
+            { text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'athena' },
+            { text: "'I got this!'", type: 'helios' },
+            { text: 'Scream ', type: 'artemis' },
+            { text: 'Stand. You attract frisbees.', type: 'poseidon' }
         ]
     },
 
@@ -56,10 +56,10 @@ const questions =[
     {
         question: `'That was a great catch! <br>How did you catch the frisbee?'`,
         choices: [
-            {text: 'Assuming gravity constant = 10 ms^2 ... ', type: 'artemis'},
-            {text: 'Moving faster means higher rate of aerobic respiration ', type: 'athena'},
-            {text: 'W\'s in the chat!!', type: 'poseidon'},
-            {text: 'Further maths.', type: 'helios'}
+            { text: 'Assuming gravity constant = 10 ms^2 ... ', type: 'artemis' },
+            { text: 'Moving faster means higher rate of aerobic respiration ', type: 'athena' },
+            { text: 'W\'s in the chat!!', type: 'poseidon' },
+            { text: 'Further maths.', type: 'helios' }
         ]
     },
 
@@ -67,21 +67,21 @@ const questions =[
     {
         question: `'That\'s amazing!<br> Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
-            {text: 'Sure! Let\'s go get some drinks', type: 'helios'},
-            {text: 'Sounds great', type: 'poseidon'},
-            {text: 'YAAAAAY', type: 'artemis'},
-            {text: 'No. I only drink water', type: 'athena'}
+            { text: 'Sure! Let\'s go get some drinks', type: 'helios' },
+            { text: 'Sounds great', type: 'poseidon' },
+            { text: 'YAAAAAY', type: 'artemis' },
+            { text: 'No. I only drink water', type: 'athena' }
         ]
     },
-    
+
     // 7
     {
         question: `"AStaR has many animals. <br>What's your favourite animal?"`,
         choices: [
-            {text: 'Wolves', type: 'artemis'},
-            {text: 'Sharks', type: 'poseidon'},
-            {text: 'Owls', type: 'athena'},
-            {text: 'Horses', type: 'helios'}
+            { text: 'Wolves', type: 'artemis' },
+            { text: 'Sharks', type: 'poseidon' },
+            { text: 'Owls', type: 'athena' },
+            { text: 'Horses', type: 'helios' }
         ]
     },
 
@@ -89,10 +89,10 @@ const questions =[
     {
         question: `"Well that was my last question. I got to go now! <br>It was fun spending time with you in AStaR"`,
         choices: [
-            {text: 'AWOOOOOOO', type: 'artemis'},
-            {text: 'NEIGHHHHH', type: 'helios'},
-            {text: 'HOOT HOOT', type: 'athena'},
-            {text: 'AWOOSHAAA', type: 'poseidon'}
+            { text: 'AWOOOOOOO', type: 'artemis' },
+            { text: 'NEIGHHHHH', type: 'helios' },
+            { text: 'HOOT HOOT', type: 'athena' },
+            { text: 'AWOOSHAAA', type: 'poseidon' }
         ]
     }
 ];
@@ -109,7 +109,7 @@ document.getElementById('quiz').style.display = 'none';
 document.getElementById('result').style.display = 'none';
 document.getElementById('restart').style.display = 'none';
 
-function start(){
+function start() {
     current_qn = 0;
     Object.keys(scores).forEach(k => scores[k] = 0);
 
@@ -123,7 +123,7 @@ function start(){
 
 
 
-function display_qns(){
+function display_qns() {
     // hide other elements
     document.getElementById('result').style.display = 'none';
     document.getElementById('restart').style.display = 'none';
@@ -134,11 +134,13 @@ function display_qns(){
     const question = questions[current_qn];
 
     // display qn
-    let html = `<p>Q${current_qn + 1}/8 ${question.question} </p>`
+    let html = `<div class="qn">`
+    html += `<p>Q${current_qn + 1}/8 ${question.question} </p>`
     html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
+    html += `</div>`
 
     // loop through choices
-    for (const choice of question.choices){
+    for (const choice of question.choices) {
         html += `<button class='btn' value='${choice.type}' id='${choice}'>${choice.text}</button>`
     }
 
@@ -148,7 +150,7 @@ function display_qns(){
 
 
 // check if any of the btn has been clicked
-function handle_clicks(){
+function handle_clicks() {
     const choice_btns = document.querySelectorAll('.btn');
     choice_btns.forEach((button) => {
         button.addEventListener('click', next_qn);
@@ -157,13 +159,13 @@ function handle_clicks(){
 
 
 // next question
-function next_qn(event){
+function next_qn(event) {
     const chosen = event.target.value;
 
     // increment score -- use weights next time
     scores[chosen]++;
-    
-    
+
+
     //debug
     /*
     const debug_container = document.querySelector('.scores');
@@ -173,9 +175,9 @@ function next_qn(event){
     }
     debug_container.innerHTML = html;
     */
-    
+
     // check if it's last qn
-    if (current_qn < questions.length - 1){
+    if (current_qn < questions.length - 1) {
         current_qn++;
         show_progress()
         display_qns();
@@ -185,7 +187,7 @@ function next_qn(event){
 }
 
 // result
-function show_result(){
+function show_result() {
     let maxScore_house = Math.max(...Object.values(scores));
     let house = Object.keys(scores).filter(
         house => scores[house] === maxScore_house
@@ -213,7 +215,7 @@ function breakTieRandom(candidates) {
     return candidates[Math.floor(Math.random() * candidates.length)];
 }
 
-function restart(){
+function restart() {
     // reset
     current_qn = 0;
     Object.keys(scores).forEach(k => scores[k] = 0);
@@ -224,7 +226,7 @@ function restart(){
     display_qns();
 }
 
-function show_progress(){
+function show_progress() {
     let bar = document.getElementById('.bar');
     //bar.innerHTML = `${}`
 }
