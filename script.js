@@ -32,7 +32,7 @@ const questions = [
 
     // 3
     {
-        question: `'That's my favourite subject! <br>Look! Our principal, Mr Heng, is inviting us to play frisbee with him'`,
+        question: `'That's my favourite subject! <br>Look! Our Principal, Mr Heng, is inviting us to play frisbee with him'`,
         choices: [
             { text: 'LETS PLAYYYY', type: 'artemis' },
             { text: 'I would rather not but I guess it doesn\’t hurt to try', type: 'athena' },
@@ -45,9 +45,9 @@ const questions = [
     {
         question: `A frisbee is coming towards you! <br>What are you doing to catch the frisbee?`,
         choices: [
-            { text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'athena' },
+            { text: 'Use projectile motion calculations to estimate where to avoid the frisbee', type: 'artemis' },
             { text: "'I got this!'", type: 'helios' },
-            { text: 'Scream ', type: 'artemis' },
+            { text: 'Scream ', type: 'athena' },
             { text: 'Stand. You attract frisbees.', type: 'poseidon' }
         ]
     },
@@ -68,9 +68,9 @@ const questions = [
         question: `'That\'s amazing!<br> Come, let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
             { text: 'Sure! Let\'s go get some drinks', type: 'helios' },
-            { text: 'Sounds great', type: 'poseidon' },
+            { text: 'Sounds great', type: 'athena' },
             { text: 'YAAAAAY', type: 'artemis' },
-            { text: 'No. I only drink water', type: 'athena' }
+            { text: 'No. I only drink water', type: 'poseidon' }
         ]
     },
 
