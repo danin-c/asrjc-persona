@@ -10,12 +10,12 @@ var scores = {
 const questions = [
     // 1 
     {
-        question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
+        question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m Bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
         choices: [
             { text: 'Of course!!', type: 'artemis' },
             { text: 'I guess I can spare some time', type: 'athena' },
             { text: 'Sure.', type: 'poseidon' },
-            { text: "Hi bob! You're so cute <3", type: 'helios' }
+            { text: "Hi Bob! You're so cute <3", type: 'helios' }
         ]
     },
 
@@ -32,7 +32,7 @@ const questions = [
 
     // 3
     {
-        question: `'That's my favourite subject! <br>Look! Our principal, Mr Heng is inviting us to play frisbee with him'`,
+        question: `'That's my favourite subject! <br>Look! Our principal, Mr Heng, is inviting us to play frisbee with him'`,
         choices: [
             { text: 'LETS PLAYYYY', type: 'artemis' },
             { text: 'I would rather not but I guess it doesn\’t hurt to try', type: 'athena' },
@@ -65,7 +65,7 @@ const questions = [
 
     // 6 drinks stall lady
     {
-        question: `'That\'s amazing!<br> Come let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
+        question: `'That\'s amazing!<br> Come, let's go have iced lemon tea from the drinks stall lady. <br>It's the best drink here :)'`,
         choices: [
             { text: 'Sure! Let\'s go get some drinks', type: 'helios' },
             { text: 'Sounds great', type: 'poseidon' },
