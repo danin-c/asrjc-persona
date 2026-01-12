@@ -164,14 +164,14 @@ function next_qn(event) {
     scores[chosen]++;
 
     //debug
-    
+    /*
     const debug_container = document.querySelector('.scores');
     html = "<br><br>";
     for(const [type, score] of Object.entries(scores)){
         html += `${type}: ${score}<br>`;
     }
     debug_container.innerHTML = html;
-    
+    */
 
     // check if it's last qn
     if (current_qn < questions.length - 1) {
