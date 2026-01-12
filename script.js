@@ -13,9 +13,9 @@ const questions = [
         question: `Welcome to AStaR! You’ve been abducted by an alien. <br>'I’m Bob! I love asking questions and going to school. <br>Please be my friend for today.'`,
         choices: [
             { text: 'Of course!!', type: 'artemis' },
+            { text: "Hi Bob! You're so cute <3", type: 'helios' },
             { text: 'I guess I can spare some time', type: 'athena' },
             { text: 'Sure.', type: 'poseidon' },
-            { text: "Hi Bob! You're so cute <3", type: 'helios' }
         ]
     },
 
@@ -117,7 +117,6 @@ function start() {
     document.getElementById('quiz').style.display = 'block';
     document.getElementById('restart').style.display = 'none';
 
-    show_progress()
     display_qns();
 }
 
@@ -127,7 +126,6 @@ function display_qns() {
     // hide other elements
     document.getElementById('result').style.display = 'none';
     document.getElementById('restart').style.display = 'none';
-    document.getElementById('bar').style.display = 'block';
 
 
     const quiz = document.getElementById('quiz');
@@ -135,7 +133,7 @@ function display_qns() {
 
     // display qn
     let html = `<div class="qn">`
-    html += `<p>Q${current_qn + 1}/${questions.length}<br> ${question.question} </p>`
+    html += `<p><strong>Q${current_qn + 1}/${questions.length}</strong><br> ${question.question} </p>`
     html += `<img class="scene" src="images/scenes/${current_qn + 1}.PNG">`
     html += `</div>`
 
@@ -165,21 +163,19 @@ function next_qn(event) {
     // increment score -- use weights next time
     scores[chosen]++;
 
-
     //debug
-    /*
+    
     const debug_container = document.querySelector('.scores');
     html = "<br><br>";
     for(const [type, score] of Object.entries(scores)){
         html += `${type}: ${score}<br>`;
     }
     debug_container.innerHTML = html;
-    */
+    
 
     // check if it's last qn
     if (current_qn < questions.length - 1) {
         current_qn++;
-        show_progress()
         display_qns();
     } else {
         show_result();
@@ -199,12 +195,11 @@ function show_result() {
     const result = document.getElementById('result');
     let html = `<h1> Results </h1>`
     html += `<img class="img" src="images/${final_house}.PNG">`
-    html += `<p> <strong> Your house: </strong>${capitalizeFirstLetter(final_house)} <br> </p>`
+    html += `<p> Your house: <strong> ${capitalizeFirstLetter(final_house)}</strong> <br> </p>`
     html += `<p>${profiles[final_house]} <br></p>`
     result.innerHTML = html
 
     document.getElementById('quiz').style.display = 'none';
-    document.getElementById('bar').style.display = 'none';
     document.getElementById('result').style.display = 'block';
     document.getElementById('restart').style.display = 'block';
 
@@ -226,10 +221,7 @@ function restart() {
     display_qns();
 }
 
-function show_progress() {
-    let bar = document.getElementById('.bar');
-    //bar.innerHTML = `${}`
-}
+
 
 // copied from stack overflow
 function capitalizeFirstLetter(val) {
